@@ -1,6 +1,6 @@
 import os
 import json
-# import openai  # Uncomment when you have your API key set up
+
 
 def load_data():
     reports = []
@@ -41,21 +41,6 @@ def generate_ai_summary(report):
     Please summarize the following field service report:
     {json.dumps(report, indent=2)}
     """
-
-    # --- AI Integration Placeholder ---
-    # In your actual implementation, call your LLM client here:
-    # client = openai.OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-    # response = client.chat.completions.create(
-    #     model="gpt-4o",
-    #     messages=[
-    #         {"role": "system", "content": system_prompt},
-    #         {"role": "user", "content": user_prompt}
-    #     ],
-    #     temperature=0.0
-    # )
-    # summary_text = response.choices[0].message.content
-    
-    # Mock AI response format for local demonstration:
     summary_text = f"""
 ========================================
 AI-GENERATED SUMMARY: {report.get('report_id')}
